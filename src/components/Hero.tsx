@@ -102,7 +102,7 @@ const Hero = () => {
             document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Explore My Work
+          See More
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
