@@ -42,6 +42,9 @@ const About = () => {
               My journey combines academic excellence with hands-on experience in software development 
               and materials research.
             </p>
+            <p>
+            I enjoy all the tech related stuff.
+            </p>
 
             <motion.div 
               className="grid grid-cols-2 gap-6"
@@ -50,7 +53,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              {[
+              {/* {[
                 { value: "3.8", label: "CGPA" },
                 { value: "10+", label: "Projects" },
                 { value: "5+", label: "Publications" },
@@ -60,7 +63,7 @@ const About = () => {
                   <div className="text-2xl font-bold text-green-400">{value}</div>
                   <div className="text-sm text-gray-400">{label}</div>
                 </div>
-              ))}
+              ))} */}
             </motion.div>
           </motion.div>
 
@@ -75,7 +78,7 @@ const About = () => {
             
             <div className="space-y-4">
               {[
-                { Icon: GraduationCap, title: "Academic Excellence", desc: "Dean's List recipient with outstanding academic performance" },
+                { Icon: GraduationCap, title: "Academic Excellence", desc: "Good academic performance" },
                 { Icon: Rocket, title: "Research Focus", desc: "Active involvement in materials science research projects" },
                 { Icon: Code, title: "Technical Skills", desc: "Proficient in Python, C, and C++ programming" },
                 { Icon: BookOpen, title: "Continuous Learning", desc: "Always exploring new technologies and methodologies" }
@@ -105,17 +108,17 @@ const About = () => {
             { 
               Icon: Code, 
               title: "Development", 
-              description: "Specialized in building modern applications using Python, C, and C++, with a focus on efficiency and performance" 
+              // description: "Specialized in building modern applications using Python, C, and C++, with a focus on efficiency and performance" 
             },
             { 
               Icon: Brain, 
               title: "Research", 
-              description: "Conducting research in advanced materials and their applications in modern technology" 
+              // description: "Conducting research in advanced materials and their applications in modern technology" 
             },
             { 
               Icon: Rocket, 
               title: "Innovation", 
-              description: "Creating innovative solutions at the intersection of materials science and technology" 
+              // description: "Creating innovative solutions at the intersection of materials science and technology" 
             }
           ].map((skill, index) => (
             <SkillCard key={index} {...skill} index={index} />
