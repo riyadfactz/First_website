@@ -12,7 +12,10 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => (
     className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm md:text-base font-medium"
     onClick={(e) => {
       e.preventDefault();
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}

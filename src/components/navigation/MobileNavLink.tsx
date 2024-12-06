@@ -14,8 +14,11 @@ const MobileNavLink: React.FC<MobileNavLinkProps> = ({ href, children, onClick }
                rounded-lg hover:bg-gray-800/50 active:bg-gray-800/70 text-lg touch-target"
     onClick={(e) => {
       e.preventDefault();
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      onClick();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        onClick();
+      }
     }}
     whileTap={{ scale: 0.98 }}
   >
