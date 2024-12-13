@@ -19,7 +19,7 @@ const Hero = () => {
           >
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-green-400/50 glow relative z-10">
               <motion.img
-                src="https://scontent.fdac31-1.fna.fbcdn.net/v/t39.30808-6/280477431_740662697102227_6071901564337563459_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFL-15F6MktiLagFCnFDFRnFlBSi_rfo4gWUFKL-t-jiIBXrnwgIaygoKKKOHQbKsTr-XJl7Re1jAoA4gr72gh1&_nc_ohc=bYhGayP1Q8sQ7kNvgEZm4sc&_nc_zt=23&_nc_ht=scontent.fdac31-1.fna&_nc_gid=ANR6P9Fgd9eEuBrOyZPFQIv&oh=00_AYDgFACZYrH6os6OQedDSUs5uFRajOApEElmYxQt8i7rxA&oe=6754A402"
+                src= "/profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover filter brightness-105 transition-transform duration-500 group-hover:scale-110"
                 whileHover={{ scale: 1.1 }}
