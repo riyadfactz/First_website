@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Github, Linkedin, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Prepare email content
+    const subject = `Message from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    
+    // Create mailto URL
+    const mailtoUrl = `mailto:mdalmahmud023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open default email client
+    window.location.href = mailtoUrl;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <section id="contact" className="min-h-screen py-20 px-4">
       <div className="max-w-4xl mx-auto">
@@ -53,6 +81,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
+            onSubmit={handleSubmit}
             className="space-y-4"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,18 +90,30 @@ const Contact = () => {
           >
             <motion.input
               type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Name"
+              required
               className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700/50 focus:border-green-400 focus:outline-none"
               whileFocus={{ scale: 1.01 }}
             />
             <motion.input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email"
+              required
               className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700/50 focus:border-green-400 focus:outline-none"
               whileFocus={{ scale: 1.01 }}
             />
             <motion.textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Message"
+              required
               rows={4}
               className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700/50 focus:border-green-400 focus:outline-none"
               whileFocus={{ scale: 1.01 }}
