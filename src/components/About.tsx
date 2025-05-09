@@ -38,12 +38,12 @@ const About = () => {
             </div>
             
             <p className="text-gray-300 leading-relaxed text-lg">
-              Passionate about exploring the intersection of materials science and technology. 
-              My journey combines academic excellence with hands-on experience in software development 
-              and materials research.
-            </p>
-            <p>
-            I enjoy all the tech related stuff.
+              I am a current student of Materials Science and Engineering with a strong interest in Computational Materials Science,
+              advanced materials, and nanotechnology. I am building a solid foundation in material properties, processing methods, and
+               characterization techniques through my studies. <br />
+              I am also passionate about technology — including programming and exploring new tools — to find innovative solutions that
+              connect materials science with modern tech. I am eager to gain practical experience through internships, research, and 
+              collaborations, and I am committed to continuous learning and problem-solving in the field.
             </p>
 
             <motion.div 
@@ -54,7 +54,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               {/* {[
-                { value: "3.8", label: "CGPA" },
+                { value: "3.73", label: "CGPA" },
                 { value: "10+", label: "Projects" },
                 { value: "5+", label: "Publications" },
                 { value: "3+", label: "Awards" }
@@ -108,17 +108,17 @@ const About = () => {
             { 
               Icon: Code, 
               title: "Development", 
-              // description: "Specialized in building modern applications using Python, C, and C++, with a focus on efficiency and performance" 
+              description: ""//"Specialized in building modern applications using Python, C, and C++, with a focus on efficiency and performance" 
             },
             { 
               Icon: Brain, 
               title: "Research", 
-              // description: "Conducting research in advanced materials and their applications in modern technology" 
+              description:  ""//"Conducting research in advanced materials and their applications in modern technology" 
             },
             { 
               Icon: Rocket, 
               title: "Innovation", 
-              // description: "Creating innovative solutions at the intersection of materials science and technology" 
+              description: " "//"Creating innovative solutions at the intersection of materials science and technology" 
             }
           ].map((skill, index) => (
             <SkillCard key={index} {...skill} index={index} />
